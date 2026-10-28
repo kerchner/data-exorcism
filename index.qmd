@@ -28,7 +28,7 @@ Dan Kerchner · George Washington University Libraries & Academic Innovation
 
 By the end of this workshop you will be able to:
 
-- Identify the types of metadata a sequencing experiment produces
+- Identify some types of metadata an experiment might produce
 - Recognize the importance of consistent, documented metadata
 - Spot common spreadsheet formatting problems that cause downstream pain
 - Apply best practices to structure data for both humans and computers

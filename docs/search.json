@@ -11,7 +11,7 @@
     "href": "index.html#learning-objectives",
     "title": "",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of this workshop you will be able to:\n\nIdentify the types of metadata a sequencing experiment produces\nRecognize the importance of consistent, documented metadata\nSpot common spreadsheet formatting problems that cause downstream pain\nApply best practices to structure data for both humans and computers"
+    "text": "Learning Objectives\nBy the end of this workshop you will be able to:\n\nIdentify some types of metadata an experiment might produce\nRecognize the importance of consistent, documented metadata\nSpot common spreadsheet formatting problems that cause downstream pain\nApply best practices to structure data for both humans and computers"
   },
   {
     "objectID": "index.html#you-and-your-data",
