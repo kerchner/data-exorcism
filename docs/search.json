@@ -1,0 +1,191 @@
+[
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "",
+    "section": "",
+    "text": "GW Libraries & Academic Innovation · Hands-on Workshop\n\n\nThe Data Exorcist\n\n\nTurning Metadata Nightmares into Tidy Data\n\n\nDan Kerchner · George Washington University Libraries & Academic Innovation"
+  },
+  {
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
+    "title": "",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this workshop you will be able to:\n\nIdentify the types of metadata a sequencing experiment produces\nRecognize the importance of consistent, documented metadata\nSpot common spreadsheet formatting problems that cause downstream pain\nApply best practices to structure data for both humans and computers"
+  },
+  {
+    "objectID": "index.html#you-and-your-data",
+    "href": "index.html#you-and-your-data",
+    "title": "",
+    "section": "You and Your Data",
+    "text": "You and Your Data\n\nWhat kind of raw data are you collecting?\nBesides you, who will be working with your data?\nWhat question will you be answering by analyzing this data?\n\nIt’s okay if you don’t know yet!!"
+  },
+  {
+    "objectID": "index.html#todays-data-set",
+    "href": "index.html#todays-data-set",
+    "title": "",
+    "section": "Today’s Data Set",
+    "text": "Today’s Data Set\nTenaillon O, Barrick JE, Ribeck N, Deatherage DE, Blanchard JL, Dasgupta A, Wu GC, Wielgoss S, Cruveiller S, Médigue C, Schneider D, Lenski RE. Tempo and mode of genome evolution in a 50,000-generation experiment (2016) Nature. 536(7615): 165–170. 10.1038/nature18959\n\nMore info at datacarpentry.org/organization-genomics/data"
+  },
+  {
+    "objectID": "index.html#the-sample-submission-workflow",
+    "href": "index.html#the-sample-submission-workflow",
+    "title": "",
+    "section": "The Sample Submission Workflow",
+    "text": "The Sample Submission Workflow\n\n\nKept at the lab (not sent): metadata file (metadata.tsv)\nSent to the facility: sample submission sheet\nReceived back from the facility: results metadata file + sequence files (.fastq.gz)"
+  },
+  {
+    "objectID": "index.html#types-of-files-well-be-using",
+    "href": "index.html#types-of-files-well-be-using",
+    "title": "",
+    "section": "Types of Files We’ll Be Using",
+    "text": "Types of Files We’ll Be Using\n\nSpreadsheet data from the experiment that tracks the strains and their phenotype over time\nSpreadsheet data with information on the samples that were sequenced\n\nThe names of the samples\nHow they were prepared\nSequencing conditions\n\nThe sequence data returned from the sequencing lab"
+  },
+  {
+    "objectID": "index.html#why-are-we-learning-this",
+    "href": "index.html#why-are-we-learning-this",
+    "title": "",
+    "section": "Why Are We Learning This?",
+    "text": "Why Are We Learning This?\nMore organized/clean data == easier analysis/data wrangling by code and/or humans"
+  },
+  {
+    "objectID": "index.html#example-metadata",
+    "href": "index.html#example-metadata",
+    "title": "",
+    "section": "Example Metadata",
+    "text": "Example Metadata\nMessy version (XLSX): go.gwu.edu/ecolimessy\n\nDiscussion (with the person next to you):\nWhat are some of the problems with this spreadsheet?\n\nWhat is the issue?\nWhy does it matter computationally?\nHow would you fix it?"
+  },
+  {
+    "objectID": "index.html#example-metadata-1",
+    "href": "index.html#example-metadata-1",
+    "title": "",
+    "section": "Example Metadata",
+    "text": "Example Metadata\nCleaner version (TSV): go.gwu.edu/ecoliclean"
+  },
+  {
+    "objectID": "index.html#messy-vs.-tidy-a-side-by-side",
+    "href": "index.html#messy-vs.-tidy-a-side-by-side",
+    "title": "",
+    "section": "Messy vs. Tidy: A Side-by-Side",
+    "text": "Messy vs. Tidy: A Side-by-Side\n\n\nMessy\n\nTwo separate data tables on one sheet\nColumn names with spaces (sample date)\nColors encode meaning (no column captures it)\nSpecies + strain combined in one cell (E. coli K-12)\nInconsistent column names across rows\n\n\n\nTidy\n\nOne table per sheet / file\nColumn names: sample_date\nEncode everything in text columns\nSeparate columns: genus, species, strain\nConsistent names throughout"
+  },
+  {
+    "objectID": "index.html#structuring-data-in-spreadsheets",
+    "href": "index.html#structuring-data-in-spreadsheets",
+    "title": "",
+    "section": "Structuring Data in Spreadsheets",
+    "text": "Structuring Data in Spreadsheets\n\nLeave the raw data raw - do not change it!\nPut each observation or sample in its own row\nPut all your variables in columns - data that vary between samples\nUse column names that are explanatory, but without spaces. Use _ or CamelCase instead of a space. For instance sequencing_depth or SeqDepth is better than Sequencing Depth, because computers interpret spaces in particular ways\nDon’t combine multiple pieces of information in one cell. Example - instead of this: species_strain = \"E. coli K12\" try this: species = \"E. coli\", strain = \"K12\" Another example - consider separating genus and species (it depends)\nExport the cleaned data to a text-based format like CSV (comma-separated values) or TSV (tab-separated values). This ensures that anyone can use the data, and is required by most data repositories"
+  },
+  {
+    "objectID": "index.html#more-spreadsheet-bloopers",
+    "href": "index.html#more-spreadsheet-bloopers",
+    "title": "",
+    "section": "More Spreadsheet Bloopers",
+    "text": "More Spreadsheet Bloopers\n\nDon’t put multiple tables in one sheet\nBe wary of using multiple tabs/worksheets\nRecord zeros (unless they are actually missing)\nHow are you representing null/missing values? What could be the problem with: 0 / Blank / -999 / NA / N/A / NULL / None / - / .\nDon’t use formatting to convey information (consider encoding this info)\nDon’t merge cells!\nAvoid using special characters in data (and especially in column names)"
+  },
+  {
+    "objectID": "index.html#what-is-metadata",
+    "href": "index.html#what-is-metadata",
+    "title": "",
+    "section": "What Is Metadata?",
+    "text": "What Is Metadata?\nMetadata = data about your data\n\nWithout metadata describing what was sequenced, your sequences are meaningless — just strings of letters with no scientific context.\n\nMetadata in a genomics project includes:\n\nExperimental spreadsheets and sample sheets\nLab notebook entries (wet lab procedures, dates, protocols)\nSample preparation and sequencing parameters\nLinks between sample IDs and resulting files"
+  },
+  {
+    "objectID": "index.html#why-metadata-standards-exist",
+    "href": "index.html#why-metadata-standards-exist",
+    "title": "",
+    "section": "Why Metadata Standards Exist",
+    "text": "Why Metadata Standards Exist\nSeveral organizations maintain field-specific metadata standards. The Digital Curation Center maintains a list of research metadata standards: www.dcc.ac.uk/guidance/standards/metadata/list\n\nNo standard for your situation? Ask: “What is the minimum information someone would need to work with my data — without talking to me?”"
+  },
+  {
+    "objectID": "index.html#problems-in-metadata",
+    "href": "index.html#problems-in-metadata",
+    "title": "",
+    "section": "Problems in Metadata",
+    "text": "Problems in Metadata\nDownload and open the text file at go.gwu.edu/seqsubmit\n\nWhat are some errors you can spot in the data? Typos, missing data, inconsistencies?\nWhat improvements could be made to the choices in variable naming?\nWhat are some errors in the spreadsheet that would be difficult to spot? Is there any way you can test for these types of errors?"
+  },
+  {
+    "objectID": "index.html#metadata---sequencing-data-received-back",
+    "href": "index.html#metadata---sequencing-data-received-back",
+    "title": "",
+    "section": "Metadata - Sequencing Data Received Back",
+    "text": "Metadata - Sequencing Data Received Back\nDownload the sequencing data received back\n\nAs text: go.gwu.edu/seqdata\nAs Excel: go.gwu.edu/seqexcel\nHow are these samples organized?\nIf you wanted to associate the sequence file names with their corresponding sample names from the submission sheet, could you do so? How?\nWhat do the _R1 and _R2 extensions mean in the file names?\nWhat does the .gz extension on the filenames indicate?\nWhat is the total file size of the sequence files referenced in the metadata - what challenges in downloading and sharing these data might exist?"
+  },
+  {
+    "objectID": "index.html#storing-data",
+    "href": "index.html#storing-data",
+    "title": "",
+    "section": "Storing Data",
+    "text": "Storing Data\nStore the data\n\nAccessible by you and other members of your lab\nLeave the raw data raw. Take measures to avoid accidentally modifying raw data\nRedundant backups - 2 locations in different regions\n\nSolutions include\n\nOn-campus data storage\nHard drives\nCloud storage (Amazon S3, MS Azure, Google Cloud, etc.)\nOSF (Open Science Framework) - files &lt; 5 GB"
+  },
+  {
+    "objectID": "index.html#anatomy-of-a-research-spreadsheet",
+    "href": "index.html#anatomy-of-a-research-spreadsheet",
+    "title": "",
+    "section": "Anatomy of a Research Spreadsheet",
+    "text": "Anatomy of a Research Spreadsheet\nA well-formed spreadsheet has a simple structure:\n\n\n\n\ncolumn (variable)\ncolumn (variable)\n\n\n\n\nrow (observation)\nvalue\nvalue\n\n\nrow (observation)\nvalue\nvalue\n\n\n\nOne row = one sample. One column = one measured attribute."
+  },
+  {
+    "objectID": "index.html#summary-six-rules",
+    "href": "index.html#summary-six-rules",
+    "title": "",
+    "section": "Summary: Six Rules",
+    "text": "Summary: Six Rules\n\nPreserve raw data — never modify the original; work from copies\nOne observation per row — each sample gets exactly one row\nVariables in columns — measured attributes live across columns\nClear column names — no spaces; use snake_case, kebab-case, or camelCase\nAtomic data — one piece of information per cell; split combined values into separate columns\nExport as plain text — use CSV for universal, long-term accessibility"
+  },
+  {
+    "objectID": "index.html#key-takeaway",
+    "href": "index.html#key-takeaway",
+    "title": "",
+    "section": "Key Takeaway",
+    "text": "Key Takeaway\n\n“Organizing your data properly at this point of your experiment will help your analysis later” — and will make data deposition, journal submission, and collaboration much smoother.\n\nTools for cleaning existing messy data:\n\nOpenRefine — powerful, visual data cleaning\nData Carpentry spreadsheet lesson — detailed guide to common formatting mistakes"
+  },
+  {
+    "objectID": "index.html#exercise-diagnosing-a-submission-sheet",
+    "href": "index.html#exercise-diagnosing-a-submission-sheet",
+    "title": "",
+    "section": "Exercise: Diagnosing a Submission Sheet",
+    "text": "Exercise: Diagnosing a Submission Sheet\n\nYour turn. Review the example sample submission sheet. Find and categorize the issues you see:\n\n\n\nCategory\nExamples you found\n\n\n\n\nNaming inconsistencies\n\n\n\nMissing/ambiguous data\n\n\n\nFormatting problems\n\n\n\nOther\n\n\n\n\n\n~10 minutes, then group discussion"
+  },
+  {
+    "objectID": "index.html#what-comes-back-from-the-facility",
+    "href": "index.html#what-comes-back-from-the-facility",
+    "title": "",
+    "section": "What Comes Back from the Facility",
+    "text": "What Comes Back from the Facility\nThe facility returns two things:\n\nMetadata documentation — updated sample sheet linking IDs to files\nSequence files — raw reads in compressed FASTQ format\n\n\n\n\n\nFile name pattern\nWhat it means\n\n\n\n\nSampleID_R1.fastq.gz\nRead 1 (forward read)\n\n\nSampleID_R2.fastq.gz\nRead 2 (reverse read, paired-end)\n\n\n.gz extension\ngzip-compressed to reduce disk space\n\n\n\n\nYour sample IDs are the link between submission sheet and returned files — they must match exactly."
+  },
+  {
+    "objectID": "index.html#three-laws-of-raw-data-storage",
+    "href": "index.html#three-laws-of-raw-data-storage",
+    "title": "",
+    "section": "Three Laws of Raw Data Storage",
+    "text": "Three Laws of Raw Data Storage\n\n\nNever modify raw data — all analysis uses copies\nRedundant backups in physically separate locations\nAccessible to lab members and leadership (not just the person who generated it)\n\n\nStorage options to consider:\n\nInstitutional HPC / research computing storage\nExternal hard drives (offline backup)\nCloud: Amazon S3, Microsoft Azure, Google Cloud, Open Science Framework"
+  },
+  {
+    "objectID": "index.html#key-takeaway-1",
+    "href": "index.html#key-takeaway-1",
+    "title": "",
+    "section": "Key Takeaway",
+    "text": "Key Takeaway\n\nPlanning, documenting, and organizing are not overhead — they are the science. Errors introduced at the data collection and storage stage propagate through every downstream analysis.\n\nThe metadata you document now is the metadata future-you (and your collaborators, and reviewers) will need."
+  },
+  {
+    "objectID": "index.html#the-exorcism-toolkit",
+    "href": "index.html#the-exorcism-toolkit",
+    "title": "",
+    "section": "The Exorcism Toolkit",
+    "text": "The Exorcism Toolkit\nA summary of what we’ve covered:\n\n\n\nProblem\nTool / Practice\n\n\n\n\nMessy spreadsheet\nTidy data rules + tools such as OpenRefine\n\n\nNo metadata standard\n“Minimum info needed” heuristic\n\n\nAmbiguous file names\nConsistent, atomic naming conventions\n\n\nLost or corrupted raw data\n3-location backup strategy\n\n\nUnreproducible analysis\nDocument everything; preserve originals"
+  },
+  {
+    "objectID": "index.html#resources",
+    "href": "index.html#resources",
+    "title": "",
+    "section": "Resources",
+    "text": "Resources\n\nData Carpentry — Genomics Organization lesson datacarpentry.github.io/organization-genomics\nData Carpentry — Spreadsheet Ecology lesson (detailed formatting mistakes) datacarpentry.github.io/spreadsheet-ecology-lesson\nOpenRefine openrefine.org"
+  },
+  {
+    "objectID": "index.html#thanks",
+    "href": "index.html#thanks",
+    "title": "",
+    "section": "Thanks! 🔮",
+    "text": "Thanks! 🔮\nDan Kerchner | George Washington University Libraries kerchner@gwu.edu\nStats & Coding help @ GW:\n\n\n\n\n\n\n\n\nme\nAI, R, Python\ncalendly.com/kerchner\n\n\nAcademic Commons Data Consultants\nR, Statistics, Python, SAS, Excel\ngo.gwu.edu/DataConsulting\n\n\nLAI Software Developers\nPython, web apps, HTML\ncalendly.com/gwul-coding\n\n\n\nThese slides: kerchner.github.io/data-exorcism Code: github.com/kerchner/data-exorcism\n\n\n\nThe Data Exorcist · GW Libraries & Academic Innovation"
+  }
+]

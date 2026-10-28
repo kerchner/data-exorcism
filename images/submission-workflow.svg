@@ -1,0 +1,82 @@
+<svg viewBox="0 0 1560 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#7fbae3"/>
+    </marker>
+  </defs>
+
+  <!-- Box 1: Lab prepares samples -->
+  <rect x="20" y="90" width="230" height="190" rx="14" fill="#00223e" stroke="#d6bf91" stroke-width="3"/>
+  <text x="135" y="140" text-anchor="middle" font-size="36">🧪</text>
+  <text x="135" y="188" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="19" fill="#d6bf91">Lab / Researcher</text>
+  <text x="135" y="216" text-anchor="middle" font-family="Atkinson Hyperlegible, sans-serif" font-size="16" fill="#f6f1e8">prepares samples</text>
+
+  <!-- Box 2: Sequencing Facility -->
+  <rect x="670" y="90" width="220" height="190" rx="14" fill="#00223e" stroke="#d6bf91" stroke-width="3"/>
+  <text x="780" y="140" text-anchor="middle" font-size="36">🧬</text>
+  <text x="780" y="188" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="19" fill="#d6bf91">Sequencing</text>
+  <text x="780" y="216" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="19" fill="#d6bf91">Facility</text>
+
+  <!-- Box 3: Lab receives data -->
+  <rect x="1310" y="90" width="230" height="190" rx="14" fill="#00223e" stroke="#d6bf91" stroke-width="3"/>
+  <text x="1425" y="140" text-anchor="middle" font-size="36">📥</text>
+  <text x="1425" y="188" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="19" fill="#d6bf91">Lab / Researcher</text>
+  <text x="1425" y="216" text-anchor="middle" font-family="Atkinson Hyperlegible, sans-serif" font-size="16" fill="#f6f1e8">receives data</text>
+
+  <!-- Arrow 1: Lab -> Facility (submission sheet only) -->
+  <line x1="250" y1="185" x2="668" y2="185" stroke="#7fbae3" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow 2: Facility -> Lab -->
+  <line x1="890" y1="185" x2="1308" y2="185" stroke="#7fbae3" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+  <!-- Retained: dashed connector from Lab box down to the metadata file it keeps -->
+  <line x1="135" y1="280" x2="135" y2="310" stroke="#d6bf91" stroke-width="2" stroke-dasharray="5,4"/>
+
+  <!-- File icon: Metadata file — stays at the lab, never sent to the facility -->
+  <g>
+    <path d="M103,314 L103,380 L167,380 L167,314 L153,314 L153,300 L103,300 Z" fill="#f6f1e8" stroke="#00223e" stroke-width="2"/>
+    <path d="M153,300 L153,314 L167,314 Z" fill="#d6bf91" stroke="#00223e" stroke-width="2"/>
+    <line x1="113" y1="333" x2="157" y2="333" stroke="#00223e" stroke-width="2.5"/>
+    <line x1="113" y1="345" x2="157" y2="345" stroke="#00223e" stroke-width="2.5"/>
+    <line x1="113" y1="357" x2="145" y2="357" stroke="#00223e" stroke-width="2.5"/>
+    <line x1="113" y1="369" x2="151" y2="369" stroke="#00223e" stroke-width="2.5"/>
+    <text x="135" y="401" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" fill="#d6bf91">Metadata file</text>
+    <text x="135" y="419" text-anchor="middle" font-family="Fira Code, monospace" font-size="11" fill="#f6f1e8">metadata.tsv</text>
+    <text x="135" y="437" text-anchor="middle" font-family="Atkinson Hyperlegible, sans-serif" font-style="italic" font-size="12" fill="#7fbae3">kept at the lab</text>
+  </g>
+
+  <!-- File icon: Sample submission file — travels to the facility -->
+  <g>
+    <path d="M428,159 L428,225 L492,225 L492,159 L478,159 L478,145 L428,145 Z" fill="#f6f1e8" stroke="#00223e" stroke-width="2"/>
+    <path d="M478,145 L478,159 L492,159 Z" fill="#d6bf91" stroke="#00223e" stroke-width="2"/>
+    <line x1="438" y1="178" x2="482" y2="178" stroke="#00223e" stroke-width="2.5"/>
+    <line x1="438" y1="190" x2="470" y2="190" stroke="#00223e" stroke-width="2.5"/>
+    <line x1="438" y1="202" x2="482" y2="202" stroke="#00223e" stroke-width="2.5"/>
+    <line x1="438" y1="214" x2="464" y2="214" stroke="#00223e" stroke-width="2.5"/>
+    <text x="460" y="246" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" fill="#d6bf91">Submission sheet</text>
+    <text x="460" y="264" text-anchor="middle" font-family="Fira Code, monospace" font-size="11" fill="#f6f1e8">submission.tsv</text>
+  </g>
+
+  <!-- File icon: Results metadata file (gap 2, left) -->
+  <g>
+    <path d="M963,159 L963,225 L1027,225 L1027,159 L1013,159 L1013,145 L963,145 Z" fill="#f6f1e8" stroke="#00223e" stroke-width="2"/>
+    <path d="M1013,145 L1013,159 L1027,159 Z" fill="#d6bf91" stroke="#00223e" stroke-width="2"/>
+    <line x1="973" y1="178" x2="1017" y2="178" stroke="#00223e" stroke-width="2.5"/>
+    <line x1="973" y1="190" x2="1005" y2="190" stroke="#00223e" stroke-width="2.5"/>
+    <line x1="973" y1="202" x2="1017" y2="202" stroke="#00223e" stroke-width="2.5"/>
+    <line x1="973" y1="214" x2="999" y2="214" stroke="#00223e" stroke-width="2.5"/>
+    <text x="995" y="246" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" fill="#d6bf91">Results metadata</text>
+    <text x="995" y="264" text-anchor="middle" font-family="Fira Code, monospace" font-size="11" fill="#f6f1e8">results_metadata.txt</text>
+  </g>
+
+  <!-- File icon: Sequence file (gap 2, right) -->
+  <g>
+    <path d="M1173,159 L1173,225 L1237,225 L1237,159 L1223,159 L1223,145 L1173,145 Z" fill="#f6f1e8" stroke="#00223e" stroke-width="2"/>
+    <path d="M1223,145 L1223,159 L1237,159 Z" fill="#d6bf91" stroke="#00223e" stroke-width="2"/>
+    <text x="1205" y="179" text-anchor="middle" font-family="Fira Code, monospace" font-size="9.5" fill="#1f7a63">ACTGTCAAC</text>
+    <text x="1205" y="192" text-anchor="middle" font-family="Fira Code, monospace" font-size="9.5" fill="#1f7a63">GGTACCATG</text>
+    <text x="1205" y="205" text-anchor="middle" font-family="Fira Code, monospace" font-size="9.5" fill="#1f7a63">TTCAGGTCA</text>
+    <text x="1205" y="246" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" fill="#d6bf91">Sequence file</text>
+    <text x="1205" y="264" text-anchor="middle" font-family="Fira Code, monospace" font-size="11" fill="#f6f1e8">sample_R1.fastq.gz</text>
+  </g>
+</svg>

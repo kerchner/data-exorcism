@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: c/t
+    show-slide-number: all
+    controls: true
+    progress: true
+    history: true
+    center: false
+    highlight-style: a11y
+    code-line-numbers: false
+    chalkboard: true
+    preview-links: auto
+    width: 1100
+    margin: 0.05
+    transition: fade
+    background-transition: fade
+    footer: "The Data Exorcist · GW Libraries & Academic Innovation"

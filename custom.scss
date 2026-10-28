@@ -1,0 +1,205 @@
+/*-- scss:defaults --*/
+
+// GW Brand Palette — https://communications.gwu.edu/brand-guidelines/color-palette
+$gw-blue:       #033c5a; // Primary core color — main slide background
+$navy-yard:     #00223e; // Darker blue accent — title & section dividers
+$potomac:       #0075c8;
+$potomac-80:    #3391d3;
+$potomac-50:    #7fbae3; // Accessible link color on navy
+$potomac-20:    #cce3f4;
+
+$gw-buff:       #d6bf91; // Primary core color — headings / key accent
+$buff-80:       #dac8a3;
+$buff-50:       #e8ddc6;
+$buff-20:       #f6f1e8; // Accessible body text on navy
+
+$row-house:     #ef4343; // Red accent (decorative only — not for text on navy)
+$blossom:       #d1a0b9;
+$parchment:     #ffefae;
+$blue-fog:      #52c9e8;
+$patina:        #adcab8;
+
+$body-bg:       $gw-blue;
+$body-color:    $buff-20;
+$link-color:    $potomac-50;
+$selection-bg:  rgba($gw-buff, 0.35);
+
+$font-size-root: 28px;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@400;500&display=swap');
+
+.reveal {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: $font-size-root;
+  color: $body-color;
+}
+
+.reveal .slides {
+  background-color: $gw-blue;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: "Fraunces", Georgia, serif;
+  color: $gw-buff;
+}
+
+.reveal h2 {
+  border-bottom: 3px solid $gw-buff;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.6em;
+}
+
+.reveal a {
+  color: $link-color;
+}
+
+.reveal pre code {
+  font-family: "Fira Code", monospace;
+  border-left: 4px solid $gw-buff;
+  background: $buff-20;
+  color: $navy-yard;
+}
+
+.reveal code {
+  font-family: "Fira Code", monospace;
+  font-size: 0.85em;
+  color: $gw-buff;
+  background: rgba($gw-buff, 0.14);
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
+}
+
+.reveal pre code {
+  color: $navy-yard;
+  background: $buff-20;
+  padding: 0.3em 0.6em;
+}
+
+.reveal table {
+  font-size: 0.82em;
+  color: $body-color;
+}
+
+.reveal table tr:nth-child(even) {
+  background-color: rgba($gw-buff, 0.1);
+}
+
+.reveal table thead {
+  border-bottom: 2px solid $gw-buff;
+}
+
+// ── Title slide ──────────────────────────────────────────────────────────────
+.custom-title {
+  background-color: $navy-yard !important;
+}
+
+.ct-series {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: 0.65em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $buff-50;
+  margin-bottom: 0.4em;
+}
+
+.ct-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: $gw-buff;
+  line-height: 1.1;
+  margin-bottom: 0.3em;
+}
+
+.ct-subtitle {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-size: 1.15em;
+  color: $buff-50;
+  margin-bottom: 0.8em;
+}
+
+.ct-author {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: 0.72em;
+  color: rgba($buff-80, 0.9);
+}
+
+// ── Divider / section slides ─────────────────────────────────────────────────
+.section-slide {
+  background-color: $navy-yard !important;
+  color: $buff-20 !important;
+}
+
+.section-slide h2 {
+  color: $gw-buff !important;
+  border-bottom: 2px solid rgba($gw-buff, 0.5) !important;
+  font-size: 1.8em;
+}
+
+// ── Callout / tip boxes ───────────────────────────────────────────────────────
+.tip-box {
+  background: rgba($potomac-50, 0.14);
+  border-left: 5px solid $potomac-50;
+  padding: 0.6em 1em;
+  margin: 0.8em 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.warning-box {
+  background: rgba($row-house, 0.14);
+  border-left: 5px solid $row-house;
+  padding: 0.6em 1em;
+  margin: 0.8em 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.gold-box {
+  background: rgba($gw-buff, 0.16);
+  border-left: 5px solid $gw-buff;
+  padding: 0.6em 1em;
+  margin: 0.8em 0;
+  border-radius: 0 4px 4px 0;
+}
+
+// ── Helper classes ────────────────────────────────────────────────────────────
+.smaller { font-size: 0.78em; }
+.smallest { font-size: 0.68em; }
+.boxed {
+  border: 2px solid $buff-50;
+  padding: 0.5em 0.8em;
+  border-radius: 4px;
+}
+
+// ── Two-column comparison ─────────────────────────────────────────────────────
+.compare-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2em;
+  margin-top: 0.5em;
+}
+
+.compare-bad {
+  background: rgba($row-house, 0.1);
+  border-top: 3px solid $row-house;
+  padding: 0.6em 0.8em;
+  border-radius: 0 0 4px 4px;
+}
+
+.compare-good {
+  background: rgba($patina, 0.16);
+  border-top: 3px solid $patina;
+  padding: 0.6em 0.8em;
+  border-radius: 0 0 4px 4px;
+}
+
+.compare-bad p:first-child,
+.compare-good p:first-child {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+  font-size: 0.88em;
+  color: $gw-buff;
+}
